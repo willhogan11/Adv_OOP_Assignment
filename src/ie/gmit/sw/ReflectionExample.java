@@ -1,24 +1,35 @@
 package ie.gmit.sw;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.*;
+import java.util.jar.JarEntry;
+import java.util.jar.JarInputStream;
 
 public class ReflectionExample {
 
-   private Class c;
+	private static Class c;
    
-   public static void main(String args[]){
-        if (args.length == 0) {
-            System.out.println("Please specify a class name.");
-            System.exit(1);
-        }
-        try {
-            Class queryClass = Class.forName(args[0]);
-            new ReflectionExample(queryClass);
-        } catch (ClassNotFoundException ee) {
-            System.out.println("Couldn't find class '"+ args[0] + "'");
-            System.exit(1);
-        }
-   }
+	public static void main(String args[]) {
+		
+		// Read in jarFile and display the package/class names
+		ReadJarFile readJarFile = new ReadJarFile();
+		
+		System.out.println();
+
+		// Dynamically load classes by invoking the java classloader
+	    try {
+			c = Class.forName("ie.gmit.sw.DamerauLevenshtein");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	    
+	    // Construct a new Reflection Example using the constructor with the class instance as a parameter
+	    new ReflectionExample(c);
+	}
+	
 
    public ReflectionExample(Class c){
       super();
