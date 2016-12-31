@@ -1,6 +1,10 @@
 package ie.gmit.sw;
 
 import java.lang.reflect.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
 
 public class ReflectionExample {
@@ -9,21 +13,66 @@ public class ReflectionExample {
    
 	public static void main(String args[]) {
 		
+		// Create a New ArrayList to hold the class names, extracted from the jar file
+		List<String> listOfClasses = new ArrayList<String>();	
 		
-		// Read in jarFile and display the package/class names
-		ReadJarFile readJarFile = new ReadJarFile();
+		// Create a new instance of 'ReadJarFile'
+		ReadJarFile r = new ReadJarFile();
+		
+		// Add all the class string names to an ArrayList
+		listOfClasses.addAll(r.readJarFile());
+		
+		// Display the contents of the ArrayList
+		for (String names : listOfClasses) {
+			System.out.println(names);
+		}
 		
 		System.out.println();
 
 		// Dynamically load classes by invoking the java classloader
 	    try {
-			c = Class.forName("ie.gmit.sw.DamerauLevenshtein");
+	    	
+	    	for (int i = 0; i < listOfClasses.size(); i++) {
+				c = Class.forName(listOfClasses.get(i));
+				System.out.println(c.getName());
+			}
+	    	
+			System.out.println();
+			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	    
 	    // Construct a new Reflection Example using the constructor with the class instance as a parameter
 	    new ReflectionExample(c);
+//	    System.out.println("Modifiers..." + c.getModifiers());
+//	    System.out.println("Simple Name..." + c.getSimpleName());
+//	    System.out.println("Type Name..." + c.getTypeName());
+	    
+	    
+	    Package pack = c.getPackage(); //Get the package
+	    boolean iface = c.isInterface(); //Is it an interface?
+	    
+	    Class[] interfaces = c.getInterfaces(); //Get the set of interface it implements
+	    Constructor[] cons = c.getConstructors(); //Get the set of constructors
+	    
+	    for (int i = 0; i < cons.length; i++) {
+			Class[] params = cons[i].getParameterTypes(); //Get the parameters
+			
+		}
+
+	    
+	    Field[] fields = c.getFields(); //Get the fields / attributes
+	    Method[] methods = c.getMethods(); //Get the set of methods
+	    
+	    for (int i = 0; i < methods.length; i++) {
+			Class c = methods[i].getReturnType(); //Get a method return type
+			Class[] params = methods[i].getParameterTypes(); //Get method parameters
+			
+			System.out.println("Params : " + params.length + " Return Type : " + c);
+		}
+	    
+	    
 	}
 	
 

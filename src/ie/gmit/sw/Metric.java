@@ -5,7 +5,6 @@ public class Metric {
 	private int inDegree;
 	private int outDegree;
 	
-	
 	public int getInDegree() {
 		return inDegree;
 	}

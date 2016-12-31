@@ -4,17 +4,20 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
 public class ReadJarFile {
 	
-	public ReadJarFile() {
-		readJarFile();
-	}
 	
 	// Create a private method to encapsulate what's internally
-	private static void readJarFile() {
+	
+	//...Need to clone the below list and return that clone, for 100% encapsulation
+	public List<String> readJarFile() {
+		
+		List<String> listOfClasses = new ArrayList<String>();	
 		
 		// Read in jar file working. 
 		try {
@@ -28,7 +31,7 @@ public class ReadJarFile {
 					name = name.replaceAll(".class", "");
 					
 					if (!name.contains("$")) name.substring(0, name.length() - ".class".length());
-						System.out.println(name);
+						listOfClasses.add(name);
 				}
 				next = in.getNextJarEntry();
 			}
@@ -39,5 +42,6 @@ public class ReadJarFile {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return listOfClasses;
 	}
 }
