@@ -1,18 +1,14 @@
 package ie.gmit.sw;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.lang.reflect.*;
-import java.util.jar.JarEntry;
-import java.util.jar.JarInputStream;
+
 
 public class ReflectionExample {
 
 	private static Class c;
    
 	public static void main(String args[]) {
+		
 		
 		// Read in jarFile and display the package/class names
 		ReadJarFile readJarFile = new ReadJarFile();
