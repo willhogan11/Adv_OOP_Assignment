@@ -4,7 +4,16 @@ public class Metric {
 
 	private int inDegree;
 	private int outDegree;
+	private String className;
 	
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
 	public int getInDegree() {
 		return inDegree;
 	}

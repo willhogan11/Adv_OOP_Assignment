@@ -19,22 +19,24 @@ public class ReflectionExample {
 		// Create a new instance of 'ReadJarFile'
 		ReadJarFile r = new ReadJarFile();
 		
+		r.readJarFile();
+		
+		
 		// Add all the class string names to an ArrayList
-		listOfClasses.addAll(r.readJarFile());
+		// listOfClasses.addAll(r.readJarFile());
 		
 		// Display the contents of the ArrayList
-		for (String names : listOfClasses) {
+		/*for (String names : listOfClasses) {
 			System.out.println(names);
 		}
-		
-		System.out.println();
+		System.out.println();*/
 
+		
 		// Dynamically load classes by invoking the java classloader
 	    try {
-	    	
 	    	for (int i = 0; i < listOfClasses.size(); i++) {
 				c = Class.forName(listOfClasses.get(i));
-				System.out.println(c.getName());
+				System.out.println("Name : " + c.getName());
 			}
 	    	
 			System.out.println();
@@ -45,9 +47,9 @@ public class ReflectionExample {
 	    
 	    // Construct a new Reflection Example using the constructor with the class instance as a parameter
 	    new ReflectionExample(c);
-//	    System.out.println("Modifiers..." + c.getModifiers());
-//	    System.out.println("Simple Name..." + c.getSimpleName());
-//	    System.out.println("Type Name..." + c.getTypeName());
+/*	    System.out.println("Modifiers..." + c.getModifiers());
+	    System.out.println("Simple Name..." + c.getSimpleName());
+	    System.out.println("Type Name..." + c.getTypeName());
 	    
 	    
 	    Package pack = c.getPackage(); //Get the package
@@ -58,7 +60,6 @@ public class ReflectionExample {
 	    
 	    for (int i = 0; i < cons.length; i++) {
 			Class[] params = cons[i].getParameterTypes(); //Get the parameters
-			
 		}
 
 	    
@@ -69,8 +70,8 @@ public class ReflectionExample {
 			Class c = methods[i].getReturnType(); //Get a method return type
 			Class[] params = methods[i].getParameterTypes(); //Get method parameters
 			
-			System.out.println("Params : " + params.length + " Return Type : " + c);
-		}
+			System.out.println("Params : " + params.length + " || Return Type : " + c);
+		}*/
 	    
 	    
 	}

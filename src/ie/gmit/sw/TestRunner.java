@@ -23,7 +23,7 @@ public class TestRunner {
 		    
 		    System.out.println("In Degree of Class: " + value.getInDegree());
 		    System.out.println("Out Degree of Class: " + value.getOutDegree());
-		    System.out.println("Key : " + key + " >=======> Stability of Class : " + value.getStability());
+		    System.out.println("Key : " + key + " >=======>\nStability of Class : " + value.getStability());
 		}
 	}
 }
