@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.*;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.jar.JarEntry;
@@ -12,65 +13,27 @@ import java.util.jar.JarInputStream;
 
 public class ReadJarFile {
 	
-	private static List<String> listOfClasses = new ArrayList<String>();	
-	private static Map<String, Metric> metricMap = new HashMap<String, Metric>();
-	private static Metric metric = new Metric();
+	private List<String> listOfClasses = new ArrayList<String>();	
+	private Map<String, Metric> metricMap = new HashMap<String, Metric>();
+	private Metric metric = new Metric();
 	private static Class cls;
 	
 	
 	public static void main(String[] args) throws ClassNotFoundException {
 		
-		// Testing to see if i can manually calculate the OutDegree.... 
-	/*	for (int i = 0; i < metricMap.size(); i++) {
-			
-			// Display all names in the list
-			cls = Class.forName(listOfClasses.get(i));
-			
-			System.out.println("Name: " + cls.getSimpleName() + " :  Is Interface? " + cls.isInterface());
-			// Metric m = metricMap.get(cls.getName());
-		}*/
-
+		ReadJarFile r = new ReadJarFile(cls);
 		
-		
-		// Grab each name returned from reading the Jar File and store in a list 
-		listOfClasses = readJarFile();
-		
-		
-		// Add each class in the list to a Map along with a New Metric Object
-		for (String string : listOfClasses) {
-			metricMap.put(string, new Metric());
-		}
-		
-		// Display the details of the Map
-	/*	for ( Entry<String, Metric> entry : metricMap.entrySet()) {
-		    String key = entry.getKey();
-		    metric = entry.getValue();
-		    
-		    System.out.println("Keys Stored in Map =====> " + key);
-		}*/
-		
-		
-		// Display the Names of each class name associated with the 'cls' instance
-		for (int i = 0; i < metricMap.size(); i++) {
-		
-			cls = Class.forName(listOfClasses.get(i));
-			System.out.println("Get Name: " + cls.getName());
-		}
-		
-		Class[] interfaces = cls.getInterfaces();
-		boolean isInterface = cls.isInterface();
-		
-		
-		for(Class c : interfaces){
-			System.out.println(c.getInterfaces());
-		}
-		
+	}
+	
+	
+	public ReadJarFile(Class cls) throws ClassNotFoundException{
+		this.cls = cls;
+		calcCouplings(cls);
 	}
 
 
-
 	//...Need to clone the below list and return that clone, for 100% encapsulation
-	public static List<String> readJarFile() { // Map<String, Metric>
+	public List<String> readJarFile() { 
 		
 		// Read in jar file working. 
 		try {
@@ -103,35 +66,57 @@ public class ReadJarFile {
 	
 	
 	
-	public static void calcCouplings(Class cls) {
+	public void calcCouplings(Class cls) throws ClassNotFoundException {
 		
 		int inDegree = 0;
 		int outDegree = 0;
 		
+		metricMap = populateMap(listOfClasses);
+	
+		// Display the Names of each class name associated with the 'cls' instance
+		for (int i = 0; i < metricMap.size(); i++) {
+
+			cls = Class.forName(listOfClasses.get(i));
+			// System.out.println("Name : " + cls.getName());
+			
+			Class[] interfaces = cls.getInterfaces();
+			
+			for (Class c : interfaces) {
+				
+				// Ignore anything outside of this package
+				if(metricMap.containsKey(c.getName())) {
+					System.out.println(c.getName() + " : " + c.isInterface());
+					
+					outDegree++;
+					
+					Metric m = metricMap.get(c.getName());
+					m.setInDegree(m.getInDegree() + 1);
+				}
+			}
+			metricMap.get(cls.getName()).setOutDegree(outDegree);
+		}
+	
+		/* Display Values in the Map, <String, Metric>
+		 * This displays the stored values for the Key(Class Names) and Metric Object(InDegree, OutDegree, Stability)
+		 */
+		for ( Entry<String, Metric> entry : metricMap.entrySet()) {
+		    String key = entry.getKey();
+		    Metric value = entry.getValue();
+		    System.out.println("Keys : " + key + "--------------------InDegree : " 
+										 + value.getInDegree() + "--------------------OutDegree : " 
+										 + value.getOutDegree() + "--------------------Stability : "
+										 + value.getStability());
+		}
+	}
+	
+	
+	public Map<String, Metric> populateMap(List<String> listOfClasses){
+		
 		listOfClasses = readJarFile();
 		
-		for (String string : listOfClasses) {
-	
-			metricMap.put(string, new Metric());
+		for (String names : listOfClasses) {
+			metricMap.put(names, new Metric());
 		}
-		
-		Class[] interfaces = cls.getInterfaces();
-		boolean isInterface = cls.isInterface();
-		
-		System.out.println();
+		return metricMap;
 	}
-	
-		
-	
-	public HashMap<String, Metric> fillHashMap(List<String> listOfClasses){
-		
-		Metric m = new Metric();
-		
-		for (String string : listOfClasses) {
-			metricMap.put(m.getClassName(), new Metric());
-			System.out.println("From the 'fillHashMap' method : " + string);
-		}
-		return (HashMap<String, Metric>) metricMap;
-	}
-	
 }	

@@ -17,10 +17,8 @@ public class ReflectionExample {
 		List<String> listOfClasses = new ArrayList<String>();	
 		
 		// Create a new instance of 'ReadJarFile'
-		ReadJarFile r = new ReadJarFile();
-		
-		r.readJarFile();
-		
+		/*ReadJarFile r = new ReadJarFile();
+		r.readJarFile();*/
 		
 		// Add all the class string names to an ArrayList
 		// listOfClasses.addAll(r.readJarFile());
