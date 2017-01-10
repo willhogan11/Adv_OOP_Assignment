@@ -30,6 +30,14 @@ public class Metric {
 		this.outDegree = outDegree;
 	}
 	
+	public int IncrementInDegree() {
+		return inDegree++;
+	}
+
+	public int IncrementOutDegree() {
+		return outDegree++;
+	}
+	
 	public float getStability() {
 		float stability = 0;
 		float inPlusOut = inDegree + outDegree;
