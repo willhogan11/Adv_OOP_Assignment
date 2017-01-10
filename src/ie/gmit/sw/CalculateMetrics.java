@@ -11,7 +11,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
 
-public class CalculateMetrics {
+public class CalculateMetrics implements Metricable {
 	
 	private static List<String> listOfClasses = new ArrayList<String>();	
 	private static Map<String, Metric> metricMap = new HashMap<String, Metric>();
@@ -19,40 +19,15 @@ public class CalculateMetrics {
 	private static Class cls;
 	
 	
-	// public static void main(String[] args) throws ClassNotFoundException {
+	public CalculateMetrics() throws ClassNotFoundException {
 		
-	/*	CalculateMetrics r = new CalculateMetrics(cls, metric);
-		r.readJarFile();
-		r.calcCouplings(cls);
-		// r.displayMapValues(metricMap);
-		
-		Map<String, Metric> newMetricMap = new HashMap<String, Metric>();
-		
-		for (int i = 0; i < metricMap.size(); i++) {
-			newMetricMap.put(listOfClasses.get(i), metricMap.get(i));
-		}
-		
-		System.out.println(newMetricMap.size());
-		
-		for ( Entry<String, Metric> entry : metricMap.entrySet()) {
-		    String key = entry.getKey();
-		    metric = entry.getValue();
-		    System.out.println("Keys : " + key 
-		    							 + "--------------------Class Name : " + metric.getClassName()
-		    							 + "--------------------InDegree : " + metric.getInDegree() 
-		    							 + "--------------------OutDegree : " + metric.getOutDegree() 
-		    							 + "--------------------Stability : " + metric.getStability());
-		}*/
-		
-	// }
-	
-	
-	public CalculateMetrics() throws ClassNotFoundException{
 		this.cls = cls;
 		this.metric = metric;
 		readJarFile();
 		calcCouplings();
-		displayMapValues(metricMap);
+		
+		// For Testing, displays all the Values in the HashMap [See below method body]
+		// displayMapValues(metricMap); 
 	}
 
 
@@ -90,7 +65,7 @@ public class CalculateMetrics {
 	
 	
 	
-	public Metric calcCouplings() throws ClassNotFoundException {
+	public Map<String, Metric> calcCouplings() throws ClassNotFoundException {
 		
 		int outDegree = 0;
 		
@@ -122,7 +97,7 @@ public class CalculateMetrics {
 
 		} //  End metricMap.size()	
 		
-		return metric;
+		return metricMap;
 	}
 	
 	
