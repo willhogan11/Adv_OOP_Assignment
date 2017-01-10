@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.*;
+import java.net.URL;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.jar.JarEntry;
@@ -16,15 +17,13 @@ public class CalculateMetrics implements Metricable {
 	private static List<String> listOfClasses = new ArrayList<String>();	
 	private static Map<String, Metric> metricMap = new HashMap<String, Metric>();
 	private static Metric metric = new Metric();
-	private static Class cls;
+	private static Class<?> cls;
 	
 	
 	public CalculateMetrics() throws ClassNotFoundException {
 		
-		this.cls = cls;
-		this.metric = metric;
 		readJarFile();
-		calcCouplings();
+		calculateMetrics();
 		
 		// For Testing, displays all the Values in the HashMap [See below method body]
 		// displayMapValues(metricMap); 
@@ -34,9 +33,10 @@ public class CalculateMetrics implements Metricable {
 	//...Need to clone the below list and return that clone, for 100% encapsulation
 	public List<String> readJarFile() { 
 		
-		// Read in jar file working. 
 		try {
-			JarInputStream in = new JarInputStream(new FileInputStream(new File("string-service.jar")));
+			
+			JarFileName jarFileName = new JarFileName();
+			JarInputStream in = new JarInputStream(new FileInputStream(new File(jarFileName.getFile())));
 			JarEntry next = in.getNextJarEntry();
 			
 			while (next != null) {
@@ -44,10 +44,9 @@ public class CalculateMetrics implements Metricable {
 				if (next.getName().endsWith(".class")) {
 					String name = next.getName().replaceAll("/", "\\.");
 					name = name.replaceAll(".class", "");
-					metric.setClassName(name);
 					
 					if (!name.contains("$")) name.substring(0, name.length() - ".class".length());
-						
+						metric.setClassName(name);
 						listOfClasses.add(metric.getClassName());
 				}
 				next = in.getNextJarEntry();
@@ -65,7 +64,7 @@ public class CalculateMetrics implements Metricable {
 	
 	
 	
-	public Map<String, Metric> calcCouplings() throws ClassNotFoundException {
+	public Map<String, Metric> calculateMetrics() throws ClassNotFoundException {
 		
 		int outDegree = 0;
 		
@@ -76,15 +75,14 @@ public class CalculateMetrics implements Metricable {
 		for (int i = 0; i < metricMap.size(); i++) {
 
 			cls = Class.forName(listOfClasses.get(i));
-			// System.out.println("Name : " + cls.getName());
 			
+			// Interfaces
 			Class[] interfaces = cls.getInterfaces();
 			
 			for (Class c : interfaces) {
 				
 				// Ignore anything outside of this package
 				if(metricMap.containsKey(c.getName())) {
-					// System.out.println(c.getName() + " : " + c.isInterface());
 					
 					metric = metricMap.get(c.getName());
 					metric.setOutDegree(metric.getOutDegree() + 1);
@@ -93,6 +91,60 @@ public class CalculateMetrics implements Metricable {
 					outDegree = metric.getOutDegree();
 				}
 			}
+			
+			// Constructors
+			Constructor ctorlist[] = cls.getDeclaredConstructors();
+			
+			for (Constructor constructor : ctorlist) {
+				
+				Class[] ctorParams = constructor.getParameterTypes();
+				
+				for (Class ctorparams : ctorParams) {
+					
+					if(metricMap.containsKey(ctorparams.getName())){
+						
+						metric = metricMap.get(ctorparams.getName());
+						metric.setOutDegree(metric.getOutDegree() + 1);
+						metric.setInDegree(metric.getInDegree() + 1);
+						
+						outDegree = metric.getOutDegree();
+					}
+				}
+			}
+			
+			// Fields
+			Field fieldlist[] = cls.getDeclaredFields();
+			
+			for (Field field : fieldlist) {
+				
+				if(metricMap.containsKey(field.getName())) {
+					
+					metric = metricMap.get(field.getName());
+					metric.setOutDegree(metric.getOutDegree() + 1);
+					metric.setInDegree(metric.getInDegree() + 1);
+					
+					outDegree = metric.getOutDegree();
+				}
+			}
+			
+			// Methods
+			Method methlist[] = cls.getDeclaredMethods();
+			
+			for (Method method : methlist) {
+				
+				Class[] methodParams;
+				Class methReturnType = method.getReturnType();
+				
+				if(metricMap.containsKey(methReturnType.getName())) {
+					
+					metric = metricMap.get(methReturnType.getName());
+					metric.setOutDegree(metric.getOutDegree() + 1);
+					metric.setInDegree(metric.getInDegree() + 1);
+					
+					outDegree = metric.getOutDegree();
+				}
+			}
+			
 			metricMap.get(cls.getName()).setOutDegree(outDegree);
 
 		} //  End metricMap.size()	
