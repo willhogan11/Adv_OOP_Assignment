@@ -1,4 +1,4 @@
-package ie.gmit.sw;
+package ie.gmit.sw.Reflection;
 
 /* Used to Fully Encapsulate the jar file name. 
  * No one can access this and could even be located off-site*/

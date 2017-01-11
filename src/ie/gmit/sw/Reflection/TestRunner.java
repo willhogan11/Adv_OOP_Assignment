@@ -1,4 +1,4 @@
-package ie.gmit.sw;
+package ie.gmit.sw.Reflection;
 
 import java.util.HashMap;
 import java.util.Map;
