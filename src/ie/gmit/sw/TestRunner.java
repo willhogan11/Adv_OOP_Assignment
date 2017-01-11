@@ -21,11 +21,11 @@ public class TestRunner {
 		for ( Entry<String, Metric> entry : newMetricMap.entrySet()) {
 		    String key = entry.getKey();
 		    Metric value = entry.getValue();
-		    System.out.println("Keys : " + key 
-		    							 + "--------------------Class Name : " + value.getClassName()
-		    							 + "--------------------InDegree : " + value.getInDegree() 
-		    							 + "--------------------OutDegree : " + value.getOutDegree() 
-		    							 + "--------------------Stability : " + value.getStability());
+		    System.out.println("Key : " + key 
+		    							 + "\nValues(Metrics) : \n\tClass Name : " + value.getClassName()
+		    							 + "\n\tInDegree : " + value.getInDegree() 
+		    							 + "\n\tOutDegree : " + value.getOutDegree() 
+		    							 + "\n\tStability : " + value.getStability() + "\n");
 		}
 	}
 }

@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.*;
-import java.net.URL;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.jar.JarEntry;
@@ -14,10 +13,10 @@ import java.util.jar.JarInputStream;
 
 public class CalculateMetrics implements Metricable {
 	
-	private static List<String> listOfClasses = new ArrayList<String>();	
-	private static Map<String, Metric> metricMap = new HashMap<String, Metric>();
-	private static Metric metric = new Metric();
-	private static Class<?> cls;
+	private List<String> listOfClasses = new ArrayList<String>();	
+	private Map<String, Metric> metricMap = new HashMap<String, Metric>();
+	private Metric metric = new Metric();
+	private Class<?> cls;
 	
 	
 	public CalculateMetrics() throws ClassNotFoundException {
@@ -46,8 +45,7 @@ public class CalculateMetrics implements Metricable {
 					name = name.replaceAll(".class", "");
 					
 					if (!name.contains("$")) name.substring(0, name.length() - ".class".length());
-						metric.setClassName(name);
-						listOfClasses.add(metric.getClassName());
+					listOfClasses.add(name);
 				}
 				next = in.getNextJarEntry();
 			}

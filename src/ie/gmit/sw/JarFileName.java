@@ -5,7 +5,6 @@ package ie.gmit.sw;
 public class JarFileName {
 
 	private String jarFileName = "string-service.jar";
-	// private String jarFileName = "AssessmentTwo2016.jar";
 
 	public String getFile() {
 		return jarFileName;
