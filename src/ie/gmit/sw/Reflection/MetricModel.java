@@ -8,10 +8,18 @@ import javax.swing.table.AbstractTableModel;
 public class MetricModel extends AbstractTableModel {
 
 	private static final long serialVersionUID = 1L;
+	private String[] keys;
 	private Map<String, Metric> metricMap = new HashMap<String, Metric>();
 	private Metric metric;
-
 	
+	public String[] getKeys() {
+		return keys;
+	}
+
+	public void setKeys(String[] keys) {
+		this.keys = keys;
+	}
+
 	public Metric put(String names, Metric metric) {
 		return metricMap.put(names, metric);
 	}
@@ -37,6 +45,26 @@ public class MetricModel extends AbstractTableModel {
 		return "MetricModel [metricMap=" + metricMap + ", metric=" + metric + "]";
 	}
 
+	@Override
+	public int getColumnCount() {
+		return 4;
+	}
+
+	@Override
+	public int getRowCount() {
+		return metricMap.size();
+	}
+	
+	@Override
+	public Object getValueAt(int row, int col) {
+        if (col == 0) {
+            return keys[row];
+        } else {
+            return metricMap.get(keys[row]);
+        }
+    }
+	
+	
 	public void display() {
 		
 		for ( Entry<String, Metric> entry : metricMap.entrySet()) {
@@ -48,20 +76,5 @@ public class MetricModel extends AbstractTableModel {
 		    							 + "\n\tOutDegree : " + value.getOutDegree() 
 		    							 + "\n\tStability : " + value.getStability() + "\n");
 		}
-	}
-
-	@Override
-	public int getColumnCount() {
-		return metricMap.size();
-	}
-
-	@Override
-	public int getRowCount() {
-		return 0;
-	}
-
-	@Override
-	public Object getValueAt(int arg0, int arg1) {
-		return null;
 	}
 }
