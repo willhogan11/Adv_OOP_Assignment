@@ -5,6 +5,7 @@ public class Metric {
 	private int inDegree;
 	private int outDegree;
 	private String className;
+	private float stability;
 	
 	public String getClassName() {
 		return className;
@@ -36,6 +37,10 @@ public class Metric {
 
 	public int IncrementOutDegree() {
 		return outDegree++;
+	}
+	
+	public void setStability(float stability){
+		this.stability = stability;
 	}
 	
 	public float getStability() {
