@@ -22,7 +22,6 @@ public class CalculateMetrics implements Metricable {
 	public CalculateMetrics() throws ClassNotFoundException {
 		
 		readJarFile();
-		// calculateMetrics();
 		
 		// For Testing, displays all the Values in the HashMap [See below method body]
 		// displayMapValues(metricMap); 
@@ -69,6 +68,7 @@ public class CalculateMetrics implements Metricable {
 		metricMap = populateMap(listOfClasses);
 		
 		ObjectMapAdapter objectMapAdapter;
+		Object[][] arrayObject;
 		
 		// Display the Names of each class name associated with the 'cls' instance
 		for (int i = 0; i < metricMap.size(); i++) {
@@ -148,16 +148,12 @@ public class CalculateMetrics implements Metricable {
 			
 		} //  End metricMap.size()	
 		
-		Object[][] arrayObject;
-		
 		objectMapAdapter = new ObjectMapAdapter();
-	
 		arrayObject = objectMapAdapter.adapt(metricMap, metric);
-		
-		// objectMapAdapter.displayTwoDimObject();
 		
 		return arrayObject;		
 	}
+	
 	
 	
 	/* Display Values in the Map, <String, Metric>

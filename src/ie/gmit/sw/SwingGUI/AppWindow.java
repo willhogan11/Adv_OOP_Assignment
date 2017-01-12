@@ -92,7 +92,13 @@ public class AppWindow {
         JButton btnDialog = new JButton("Show Dialog"); //Create Quit button
         btnDialog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-            	AppSummary as =  new AppSummary(frame, true);
+            	AppSummary as = null;
+				try {
+					as = new AppSummary(frame, true);
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
             	as.show();
 			}
         });

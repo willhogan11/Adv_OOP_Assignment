@@ -1,6 +1,6 @@
 package ie.gmit.sw.Reflection;
 
-public class Metric {
+public class Metric implements Metricator {
 
 	private int inDegree;
 	private int outDegree;
@@ -28,14 +28,6 @@ public class Metric {
 	
 	public void setOutDegree(int outDegree) {
 		this.outDegree = outDegree;
-	}
-	
-	public int IncrementInDegree() {
-		return inDegree++;
-	}
-
-	public int IncrementOutDegree() {
-		return outDegree++;
 	}
 	
 	public void setStability(float stability){

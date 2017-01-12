@@ -15,7 +15,7 @@ public class AppSummary extends JDialog{
 	private JPanel buttonPanel = new JPanel();
 	private Container c;
 	
-	public AppSummary(JFrame parent, boolean modal){
+	public AppSummary(JFrame parent, boolean modal) throws ClassNotFoundException{
         super(parent, modal);
         super.setTitle("Summary");
         super.setResizable(true);
@@ -33,7 +33,7 @@ public class AppSummary extends JDialog{
 	}
 	
 	
-	private void createTable(){
+	private void createTable() throws ClassNotFoundException{
 		tm = new TypeSummaryTableModel();
 		table = new JTable(tm);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
