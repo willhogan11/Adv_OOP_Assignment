@@ -9,9 +9,12 @@ public class TestRunner {
 	public static void main(String[] args) throws ClassNotFoundException {
 		
 		// Create an Instance of the CalculateMetrics class 
-		CalculateMetrics r = new CalculateMetrics();
+		CalculateMetrics cm = new CalculateMetrics();
 		
-		// Create a new HashMap to hold the map values returned from the above class instance
+		cm.calculateMetrics();
+		
+		
+		/*// Create a new HashMap to hold the map values returned from the above class instance
 		Map<String, Metric> newMetricMap = new HashMap<String, Metric>();
 		
 		// Assign values from the returned hashmap to the 'newMetricMap'
@@ -26,6 +29,6 @@ public class TestRunner {
 		    							 + "\n\tInDegree : " + value.getInDegree() 
 		    							 + "\n\tOutDegree : " + value.getOutDegree() 
 		    							 + "\n\tStability : " + value.getStability() + "\n");
-		}
+		}*/
 	}
 }

@@ -5,7 +5,6 @@ public class Metric {
 	private int inDegree;
 	private int outDegree;
 	private String className;
-	private float stability;
 	
 	public String getClassName() {
 		return className;
@@ -40,7 +39,7 @@ public class Metric {
 	}
 	
 	public void setStability(float stability){
-		this.stability = stability;
+		getStability();
 	}
 	
 	public float getStability() {

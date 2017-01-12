@@ -1,13 +1,15 @@
 package ie.gmit.sw.SwingGUI;
 
 import javax.swing.table.*;
+
+import ie.gmit.sw.Reflection.ObjectMapAdapter;
 public class TypeSummaryTableModel extends AbstractTableModel {
 	
 	private static final long serialVersionUID = 777L;
 	
 	private String[] cols = {"Col 1", "Col 2", "Col 3"};
 	
-	private Object[][] data = {
+/*	private Object[][] data = {
 		{"Stuff 1", "Other Stuff 1", "Even More Stuff 1"},
 		{"Stuff 2", "Other Stuff 2", "Even More Stuff 2"},
 		{"Stuff 3", "Other Stuff 3", "Even More Stuff 3"},
@@ -15,7 +17,11 @@ public class TypeSummaryTableModel extends AbstractTableModel {
 		{"Stuff 5", "Other Stuff 5", "Even More Stuff 5"},
 		{"Stuff 6", "Other Stuff 6", "Even More Stuff 6"},
 		{"Stuff 7", "Other Stuff 7", "Even More Stuff 7"}
-	};
+	};*/
+	
+	private Object[][] data;
+	
+	private ObjectMapAdapter objectMapAdapter;
 	
 	public int getColumnCount() {
         return cols.length;
