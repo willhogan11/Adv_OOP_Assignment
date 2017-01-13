@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.11" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="ie.gmit.sw.Reflection.Metricable" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/Metricable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="124" x="-436" y="715"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="2" language="java" name="ie.gmit.sw.Reflection.Metricator" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/Metricator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="154" x="-5" y="979"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="ie.gmit.sw.Reflection.TestRunner" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/TestRunner.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="113" x="-295" y="12"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ie.gmit.sw.Reflection.JarFileName" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/JarFileName.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="153" x="241" y="326"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="ie.gmit.sw.SwingGUI.Runner" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/SwingGUI/Runner.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="113" x="-51" y="12"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="ie.gmit.sw.Reflection.ReadJarFileData" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/ReadJarFileData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="134" x="253" y="441"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="ie.gmit.sw.SwingGUI.TypeSummaryTableModel" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/SwingGUI/TypeSummaryTableModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="232" x="-106" y="326"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="ie.gmit.sw.Reflection.ListClassable" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/ListClassable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="171" x="202" y="819"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" name="ie.gmit.sw.Reflection.ListClass" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/ListClass.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="167" x="203" y="697"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="ie.gmit.sw.Reflection.ObjectMapAdapter" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/ObjectMapAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="143" x="-278" y="715"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="ie.gmit.sw.Reflection.CalculateMetrics" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/CalculateMetrics.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="236" x="-113" y="439"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="ie.gmit.sw.Reflection.Metric" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/Metric.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="154" x="-5" y="858"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="ie.gmit.sw.SwingGUI.AppSummary" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/SwingGUI/AppSummary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="195" x="-91" y="209"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="ie.gmit.sw.Reflection.MetricFactory" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/Reflection/MetricFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="122" x="-112" y="715"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="ie.gmit.sw.SwingGUI.AppWindow" project="Adv_OOP_Assignment" 
+    file="/Adv_OOP_Assignment/src/ie/gmit/sw/SwingGUI/AppWindow.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="53" width="96" x="-45" y="111"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="16">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <realization id="18">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="19">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="20" name="readJarFileData"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="22">    
+    <bendpoint x="87" y="724"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="23" name="metric"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="26" name="fact"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="28">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="29">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="30">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="31" name="listOfClasses"/>      
+      <multiplicity id="32" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="34">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="35" name="tm"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="38" name="metricMap"/>      
+      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="40">    
+    <bendpoint x="-239" y="466"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <association id="44">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="45" name="metricFactory"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="47">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <association id="48">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="49" name="cm"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="51">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
