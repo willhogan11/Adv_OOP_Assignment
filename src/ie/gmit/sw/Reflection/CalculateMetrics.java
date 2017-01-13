@@ -17,47 +17,7 @@ public class CalculateMetrics implements Metricable {
 	private Map<String, Metric> metricMap = new HashMap<String, Metric>();
 	private Metric metric = new Metric();
 	private Class<?> cls;
-	
-	
-	public CalculateMetrics() throws ClassNotFoundException {
-		
-		readJarFile();
-		
-		// For Testing, displays all the Values in the HashMap [See below method body]
-		// displayMapValues(metricMap); 
-	}
-
-
-	//...Need to clone the below list and return that clone, for 100% encapsulation
-	public List<String> readJarFile() { 
-		
-		try {
-			
-			JarFileName jarFileName = new JarFileName();
-			JarInputStream in = new JarInputStream(new FileInputStream(new File(jarFileName.getFile())));
-			JarEntry next = in.getNextJarEntry();
-			
-			while (next != null) {
-				
-				if (next.getName().endsWith(".class")) {
-					String name = next.getName().replaceAll("/", "\\.");
-					name = name.replaceAll(".class", "");
-					
-					if (!name.contains("$")) name.substring(0, name.length() - ".class".length());
-					listOfClasses.add(name);
-				}
-				next = in.getNextJarEntry();
-			}
-			in.close();
-			
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return listOfClasses;
-	}
-	
+	private ReadJarFileData readJarFileData;
 	
 	
 	public Object[][] calculateMetrics() throws ClassNotFoundException {
@@ -65,7 +25,7 @@ public class CalculateMetrics implements Metricable {
 		int outDegree = 0;
 		
 		// Populate a hashmap, with a filled list of Class Names and Metric Objects
-		metricMap = populateMap(listOfClasses);
+		metricMap = populateMap();
 		
 		ObjectMapAdapter objectMapAdapter;
 		Object[][] arrayObject;
@@ -172,9 +132,9 @@ public class CalculateMetrics implements Metricable {
 	}
 	
 	
-	public Map<String, Metric> populateMap(List<String> listOfClasses){
-		
-		listOfClasses = readJarFile();
+	public Map<String, Metric> populateMap() {
+		readJarFileData = new ReadJarFileData();
+		listOfClasses = readJarFileData.readJarFile();
 		
 		for (String names : listOfClasses) {
 			metricMap.put(names, new Metric());

@@ -20,7 +20,7 @@ public class AppSummary extends JDialog{
         super.setTitle("Summary");
         super.setResizable(true);
         
-        this.setSize(new Dimension(500, 400));
+        this.setSize(new Dimension(700, 500));
         
 		c = getContentPane();
 		c.setLayout(new FlowLayout());	
@@ -49,9 +49,9 @@ public class AppSummary extends JDialog{
 				column.setMaxWidth(60);
 				column.setMinWidth(60);
 			}else{
-				column.setPreferredWidth(100);
-				column.setMaxWidth(100);
-				column.setMinWidth(100);
+				column.setPreferredWidth(120);
+				column.setMaxWidth(120);
+				column.setMinWidth(120);
 			}
 		}
 
