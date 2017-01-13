@@ -8,7 +8,8 @@ public class TestRunner {
 		// Create an Instance of the CalculateMetrics class 
 		CalculateMetrics cm = new CalculateMetrics();
 		
-		// Display all values from the Application in the console [For testing purposes]
+		/* Call on the below method using the above instance to run the application 
+		 * and display all the values in the console [For testing purposes] */
 		cm.calculateMetrics();
 	}
 }

@@ -1,26 +1,25 @@
 package ie.gmit.sw.Reflection;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.lang.reflect.*;
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.jar.JarEntry;
-import java.util.jar.JarInputStream;
 
 
 public class CalculateMetrics implements Metricable {
 	
-	private List<String> listOfClasses = new ArrayList<String>();	
-	private Map<String, Metric> metricMap = new HashMap<String, Metric>();
-	private Metric metric = new Metric();
+	private List<String> listOfClasses;	
+	private Map<String, Metric> metricMap;
+	private Metric metric;
 	private Class<?> cls;
 	private ReadJarFileData readJarFileData;
 	
 	
 	public Object[][] calculateMetrics() throws ClassNotFoundException {
+	
+		listOfClasses = new ArrayList<String>();
+		metricMap = new HashMap<String, Metric>();
+		MetricFactory metricFactory = MetricFactory.getInstance();
+		metric = metricFactory.getMetricObject();
 		
 		int outDegree = 0;
 		
