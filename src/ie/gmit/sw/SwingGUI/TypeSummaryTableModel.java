@@ -8,7 +8,7 @@ public class TypeSummaryTableModel extends AbstractTableModel {
 	
 	private static final long serialVersionUID = 777L;
 	
-	private String[] cols = {"Class Name", "In Degree", "Out Degree", "Stability"};
+	private String[] cols = {"", "Class Name", "In Degree", "Out Degree", "Stability"};
 	private CalculateMetrics cm;
 	private Object[][] data;
 	

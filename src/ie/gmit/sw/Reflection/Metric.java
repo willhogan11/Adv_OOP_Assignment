@@ -34,6 +34,10 @@ public class Metric implements Metricator {
 		getStability();
 	}
 	
+	public String fillColumn(){
+		return "Details";
+	}
+	
 	public float getStability() {
 		float stability = 0;
 		float inPlusOut = inDegree + outDegree;

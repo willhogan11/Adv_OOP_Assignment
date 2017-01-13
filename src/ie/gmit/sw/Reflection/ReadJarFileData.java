@@ -33,7 +33,7 @@ public class ReadJarFileData {
 			}
 			in.close();
 			
-			listOfClasses.displayList();
+			// listOfClasses.displayList();
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

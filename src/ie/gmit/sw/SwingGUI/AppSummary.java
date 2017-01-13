@@ -20,7 +20,7 @@ public class AppSummary extends JDialog{
         super.setTitle("Summary");
         super.setResizable(true);
         
-        this.setSize(new Dimension(700, 500));
+        this.setSize(new Dimension(800, 400));
         
 		c = getContentPane();
 		c.setLayout(new FlowLayout());	
@@ -49,17 +49,18 @@ public class AppSummary extends JDialog{
 				column.setMaxWidth(60);
 				column.setMinWidth(60);
 			}else{
-				column.setPreferredWidth(120);
-				column.setMaxWidth(120);
-				column.setMinWidth(120);
+				column.setPreferredWidth(175);
+				column.setMaxWidth(175);
+				column.setMinWidth(175);
 			}
 		}
 
 		tableScroller = new JScrollPane(table);
-		tableScroller.setPreferredSize(new java.awt.Dimension(485, 235));
+		tableScroller.setPreferredSize(new java.awt.Dimension(900, 400));
 		tableScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 
 		tablePanel.add(tableScroller, FlowLayout.LEFT);
+		tablePanel.setPreferredSize(new java.awt.Dimension(1000, 220));
 	}
 	
 	private void configureButtonPanel(){
