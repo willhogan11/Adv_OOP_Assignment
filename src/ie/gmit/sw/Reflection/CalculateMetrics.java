@@ -7,21 +7,22 @@ import java.util.Map.Entry;
 
 public class CalculateMetrics implements Metricable {
 	
-	private List<String> listOfClasses;	
+	private ListClass listOfClasses;	
 	private Map<String, Metric> metricMap;
 	private Metric metric;
+	private MetricFactory metricFactory;
 	private Class<?> cls;
 	private ReadJarFileData readJarFileData;
 	
 	
 	public Object[][] calculateMetrics() throws ClassNotFoundException {
 	
-		listOfClasses = new ArrayList<String>();
+		listOfClasses = new ListClass();
 		metricMap = new HashMap<String, Metric>();
-		MetricFactory metricFactory = MetricFactory.getInstance();
+		metricFactory = MetricFactory.getInstance();
 		metric = metricFactory.getMetricObject();
-		
 		int outDegree = 0;
+		
 		
 		// Populate a hashmap, with a filled list of Class Names and Metric Objects
 		metricMap = populateMap();
@@ -32,7 +33,7 @@ public class CalculateMetrics implements Metricable {
 		// Display the Names of each class name associated with the 'cls' instance
 		for (int i = 0; i < metricMap.size(); i++) {
 
-			cls = Class.forName(listOfClasses.get(i));
+			cls = Class.forName(listOfClasses.retrieve(i));
 			
 			// Interfaces
 			Class[] interfaces = cls.getInterfaces();
@@ -135,9 +136,9 @@ public class CalculateMetrics implements Metricable {
 		readJarFileData = new ReadJarFileData();
 		listOfClasses = readJarFileData.readJarFile();
 		
-		for (String names : listOfClasses) {
-			metricMap.put(names, new Metric());
-			metricMap.get(names).setClassName(names);
+		for (int i = 0; i < listOfClasses.length(); i++) {
+			metricMap.put(listOfClasses.retrieve(i), new Metric());
+			metricMap.get(listOfClasses.retrieve(i)).setClassName(listOfClasses.retrieve(i));
 		}
 		return metricMap;
 	}

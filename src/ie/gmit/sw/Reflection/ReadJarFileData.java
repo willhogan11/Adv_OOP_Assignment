@@ -4,17 +4,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
+
 public class ReadJarFileData {
 	
-	
-	public List<String> readJarFile() { 
+	public ListClass readJarFile() { 
 		
-		List<String> listOfClasses = new ArrayList<String>();
+		ListClass listOfClasses = new ListClass();
 		
 		try {
 			
@@ -34,6 +32,8 @@ public class ReadJarFileData {
 				next = in.getNextJarEntry();
 			}
 			in.close();
+			
+			listOfClasses.displayList();
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
