@@ -1,18 +1,22 @@
 package ie.gmit.sw.Reflection;
 
-/* Used to Fully Encapsulate the jar file name. 
- * No one can access this and could even be located off-site*/
-
 /**
- * Used to Fully Encapsulate the jar file name. 
- * No one can access this and could even be located off-site
+ * A class that holds the value of a given jar file name in String format.
+ * Fully Encapsulates the jar file name. 
+ * 
  * @author Will Hogan
  * @category Advanced Object oriented Programming
  */
 public class JarFileName {
 
+	// Create the name of the jar file as a String
 	private String jarFileName = "string-service.jar";
 
+	/**
+	 * Get the string value and return it.
+	 * 
+	 * @return jarFileName
+	 */
 	public String getFile() {
 		return jarFileName;
 	}

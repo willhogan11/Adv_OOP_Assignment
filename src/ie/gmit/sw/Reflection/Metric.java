@@ -1,5 +1,10 @@
 package ie.gmit.sw.Reflection;
 
+/**
+ * 
+ * @author Will Hogan
+ * @category Advanced Object oriented Programming
+ */
 public class Metric implements Metricator {
 
 	private int inDegree;
