@@ -1,7 +1,8 @@
 package ie.gmit.sw.Reflection;
 
 /** 
- * An interface that contains all declarative methods required by the {@link ListClass} class 
+ * An Interface that contains all declarative methods required by the {@link ListClass} class. 
+ * This Abstraction was created with the purpose of providing an opportunity to create any desired implementation.
  *  
  * @author Will Hogan
  * @category Advanced Object oriented Programming
@@ -9,7 +10,7 @@ package ie.gmit.sw.Reflection;
 public interface ListClassable {
 
 	/**
-	 * Takes a String as an arguement and adds it to the list. 
+	 * Takes a String as an argument and adds it to the list. 
 	 * 
 	 *  @param String str
 	 *  @return boolean list.add(str)
@@ -17,7 +18,7 @@ public interface ListClassable {
 	public abstract boolean add(String str);
 	
 	/**
-	 * Takes a Strig as an arguement and check if that string is in the list.
+	 * Takes a String as an argument and check if that string is in the list.
 	 * 
 	 *  @param String str
 	 *  @return boolean list.contains(str)

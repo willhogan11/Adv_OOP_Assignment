@@ -7,9 +7,20 @@ import java.io.IOException;
 import java.util.jar.JarEntry;
 import java.util.jar.JarInputStream;
 
-
+/**
+ * A Class used to read the contents of a given Jar File into a List. 
+ * 
+ * @author Will Hogan
+ * @category Advanced Object oriented Programming
+ */
 public class ReadJarFileData {
 	
+	
+	/**
+	 * 
+	 * 
+	 * @return ListClass listOfClasses
+	 */
 	public ListClass readJarFile() { 
 		
 		ListClass listOfClasses = new ListClass();
