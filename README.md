@@ -88,3 +88,4 @@ To run this application it is important to note that in order to focus on the re
 --- 
 
 # UML Class Diagram
+![title](https://github.com/willhogan11/Adv_OOP_Assignment/blob/master/UML.png)
