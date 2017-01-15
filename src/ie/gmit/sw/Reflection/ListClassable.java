@@ -2,7 +2,7 @@ package ie.gmit.sw.Reflection;
 
 /** 
  * An Interface that contains all declarative methods required by the {@link ListClass} class. 
- * This Abstraction was created with the purpose of providing an opportunity to create any desired implementation.
+ * This <b>Abstraction</b> was created with the purpose of providing an opportunity to create any desired implementation.
  *  
  * @author Will Hogan
  * @category Advanced Object oriented Programming

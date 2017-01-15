@@ -5,6 +5,12 @@ import java.util.*;
 import java.util.Map.Entry;
 
 
+/**
+ * 
+ * 
+ * @author Will Hogan
+ * @category Advanced Object oriented Programming
+ */
 public class CalculateMetrics implements Metricable {
 	
 	private ListClass listOfClasses;	
@@ -116,8 +122,12 @@ public class CalculateMetrics implements Metricable {
 	
 	
 	
-	/* Display Values in the Map, <String, Metric>
-	 * This displays the stored values for the Key(Class Names) and Metric Object(InDegree, OutDegree, Stability) */
+	/**
+	 * Display Values stored in the Map, <String, Metric>
+	 * This displays the stored values for the Key(Class Names) and Metric Object(ClassName, InDegree, OutDegree, Stability)
+	 * 
+	 * @param metricMap
+	 */
 	public void displayMapValues(Map<String, Metric> metricMap) {
 		
 		for ( Entry<String, Metric> entry : metricMap.entrySet()) {
@@ -132,6 +142,12 @@ public class CalculateMetrics implements Metricable {
 	}
 	
 	
+	/**
+	 * A method that returns a Map. The map uses the returned values from the ListClass object, 
+	 * to populate the Key of the map and a new Metric Object is placed as the value for each class Name in the list. 
+	 * 
+	 * @return metricMap
+	 */
 	public Map<String, Metric> populateMap() {
 		readJarFileData = new ReadJarFileData();
 		listOfClasses = readJarFileData.readJarFile();

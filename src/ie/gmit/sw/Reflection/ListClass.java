@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * A Customised List class that implements the {@link ListClassable} interface and delegates calls to the java.util.list package, 
  * which performs a number of required operations. 
- * Created and used to provide a good example of Composition and Delegation, 
+ * Created and used to provide a good example of <b>Composition and Delegation</b>, 
  * ie that a metric to be calculated {@link CalculateMetrics} 'HAS-A' List of classes associated with it and that 
  * by implementing a customised version of the java.util.list class, demonstrates the use of Delegation. 
  * 
@@ -19,7 +19,7 @@ public class ListClass implements ListClassable {
 	private List<String> list = new ArrayList<String>();
 	
 	/**
-	 * Takes a String as an arguement and adds it to the list. 
+	 * Takes a String as an argument and adds it to the list. 
 	 * 
 	 *  @param String str
 	 *  @return boolean list.add(str)
@@ -29,7 +29,7 @@ public class ListClass implements ListClassable {
 	}
 	
 	/**
-	 * Takes a Strig as an arguement and check if that string is in the list.
+	 * Takes a String as an argument and check if that string is in the list.
 	 * 
 	 *  @param String str
 	 *  @return boolean list.contains(str)

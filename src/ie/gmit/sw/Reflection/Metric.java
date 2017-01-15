@@ -3,7 +3,7 @@ package ie.gmit.sw.Reflection;
 /**
  * A 'Bean' class that contains Getters and Setters for a given Metric object. 
  * As the instance variables are declared as private, only the get and set methods are visible,
- * which encapsulates them from an outside class.
+ * which <b>Encapsulates</b> them from an outside class.
  *  
  * A Metric object will hold the following:</br>
  * <ul>
@@ -11,10 +11,9 @@ package ie.gmit.sw.Reflection;
  * <li>The In Degree or Afferent Couplings(Ca), which is the number of edges incident on a given class. </li>
  * <li>The Out Degree or Efferent Couplings(Ce), which is the number of edges emanating from a class. </li>
  * <li>The Stability of the class, that is calculated by using the below formula </li>
+ * <li><b><i>i = ce / ca + ce</i></b><br></li>
  * </ul>
- * 		     ce
- * I =  ------------
- * 	     ca   +  ce 
+ * 
  * 
  * @author Will Hogan
  * @category Advanced Object oriented Programming

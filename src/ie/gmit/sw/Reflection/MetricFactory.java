@@ -1,8 +1,8 @@
 package ie.gmit.sw.Reflection;
 
 /** 
- * A Factory class that creates a Single instance of the Metric class
- * I chose the Metric class to use to implement the Factory Pattern, as at any one time, there
+ * A Factory class that creates a Single instance of the Metric class. 
+ * I chose the Metric class to use to implement the <b>Factory Pattern</b>, as at any one time, there
  * will only be one instance of a Metric object per run. 
  * 
  * @author Will Hogan

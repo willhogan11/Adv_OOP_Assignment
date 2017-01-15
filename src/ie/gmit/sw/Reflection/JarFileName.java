@@ -2,7 +2,7 @@ package ie.gmit.sw.Reflection;
 
 /**
  * A class that holds the value of a given jar file name in String format.
- * Fully Encapsulates the jar file name. 
+ * Fully <b>Encapsulates</b> the jar file name. 
  * 
  * @author Will Hogan
  * @category Advanced Object oriented Programming
