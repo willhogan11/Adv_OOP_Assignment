@@ -54,15 +54,23 @@ The process of data hiding was used throughout all relevant classes in this appl
 As briefly mentioned, i used composition frequently in my application, however i did use Implementation Inheritance in the form of a classes implementing a specific Interface. This allows for multiple interface implementations, whereas specification doesn't permit multiple inheritance at all. 
 
 #### Single Responsibility Principle
+I used this principle to separate out my methods and classes and each one is doing one thing, for example the ```Metric``` class deals with, and only contains variables associated with the Metric class itself, which offers a **High Degree of Cohesion**, ie that a Class contains things that belong together.  
 
+#### Singleton / Factory pattern
+A Singleton Factory class that creates a Single instance of the Metric class. I chose the Metric class to use to implement the **Factory Pattern**, as at any one time, there will only be one instance of a Metric object per run. 
+
+#### Adapter Pattern
+As i progressed through the development of my application i realised that at some point i needed to try and take what's in my HashMap (That Stores the class / Package name as _Key_ and a Metric Object as the _Value_), and somehow get this into a 2d Object Array in order to properly display the data in the JTable section of the GUI. To overcome this i created the class ```ObjectMapAdapter```, that takes in a Map as an argument and returns a filled 2d Object Array. This may not conform with the exact specifications of how the Adapter pattern operates, however i went with the general spirit of how it's used. 
 
 ---
 
 # Extras Added
 
 ### Swing GUI implementation
+The Swing application displays the data returned by the ```CalculateMetrics``` class in a JTable. There is a short menu that at the click of a button, will either close the application or open a separate dialog to display the Metric Data in tabular format. 
 
 ### Java Docs
+A fully commented Java-Doc has been added to the application, with a complete breakdown of the API.  
 
 ### UML Diagram (See Below)
 
@@ -75,6 +83,7 @@ I extensively used github services to manage my Commits, Branches, Issues and Mi
 --- 
 
 # Execution Instructions
+To run this application it is important to note that in order to focus on the required OOP side of this application, i opted to use the hardcoded Jar File ```string-service.jar```, which is available in this repository and will need to be placed in the root of the project directory. This project
 
 --- 
 
