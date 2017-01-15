@@ -35,6 +35,7 @@ public class CalculateMetrics implements Metricable {
 	 * @return arrayObject
 	 * @throws ClassNotFoundException
 	 */
+	@SuppressWarnings("rawtypes")
 	public Object[][] calculateMetrics() throws ClassNotFoundException {
 	
 		// Initialising private instance, and local variables  

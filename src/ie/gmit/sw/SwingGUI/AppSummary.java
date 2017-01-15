@@ -4,7 +4,16 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.*;
+import ie.gmit.sw.Reflection.CalculateMetrics;
 
+
+/**
+ * A class that is used to display the Metric data analysed and returned by the {@link CalculateMetrics} class. 
+ * The JTable is loaded when the <b>Display Metric Summary</b> button is clicked in the {@link AppWindow} class JFrame. 
+ * 
+ * @author Will Hogan
+ * @category Advanced Object oriented Programming
+ */
 public class AppSummary extends JDialog{
 	private static final long serialVersionUID = 777L;	
 	private TypeSummaryTableModel tm = null;
@@ -15,6 +24,13 @@ public class AppSummary extends JDialog{
 	private JPanel buttonPanel = new JPanel();
 	private Container c;
 	
+	/**
+	 * The constructor of the AppSummary class that loads the various methods etc. 
+	 * 
+	 * @param JFrame parent
+	 * @param boolean modal
+	 * @throws ClassNotFoundException
+	 */
 	public AppSummary(JFrame parent, boolean modal) throws ClassNotFoundException{
         super(parent, modal);
         super.setTitle("Summary");
@@ -32,7 +48,11 @@ public class AppSummary extends JDialog{
         c.add(buttonPanel);
 	}
 	
-	
+	/**
+	 * A Method that creates the JTable within the JFrame of this class. 
+	 * 
+	 * @throws ClassNotFoundException
+	 */
 	private void createTable() throws ClassNotFoundException{
 		tm = new TypeSummaryTableModel();
 		table = new JTable(tm);
@@ -63,7 +83,10 @@ public class AppSummary extends JDialog{
 		tablePanel.setPreferredSize(new java.awt.Dimension(1000, 220));
 	}
 	
-	private void configureButtonPanel(){
+	/**
+	 * A Method that creates the button controls in the JFrame of this class. 
+	 */
+	private void configureButtonPanel() {
     	buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
 		//Configure the Cancel button

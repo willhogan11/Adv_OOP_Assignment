@@ -1,15 +1,22 @@
 package ie.gmit.sw.SwingGUI;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
-
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
 
+/**
+ * The Application GUI frame that contains 2 button options, Display Metric Summary and Close. 
+ * Clicking the display metric button, launches a JFrame table with the analysed metric data from a given Jar File.  
+ * 
+ * @author Will Hogan
+ * @category Advanced Object oriented Programming
+ */
 public class AppWindow {
 	private JFrame frame;
-	
+
+	/**
+	 * The Constructor for this class. 
+	 */
 	public AppWindow(){
 		//Create a window for the application
 		frame = new JFrame();
@@ -25,7 +32,8 @@ public class AppWindow {
         
         JButton btnDialog = new JButton("Display Metric Summary"); //Create Quit button
         btnDialog.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent evt) {
             	AppSummary as = null;
 				try {
 					as = new AppSummary(frame, true);
