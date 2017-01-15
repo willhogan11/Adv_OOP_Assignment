@@ -8,7 +8,7 @@ import java.util.Map;
  * takes both a required Map and a Metric Object as arguments.   
  * The purpose of creating this class and class method was to deal with returning 
  * the data to the <b>View</b> / GUI Front end section of the application. 
- * A given {@link Metric} object is saved using a HashMap<K,V>
+ * A given {@link Metric} object is saved using a HashMap
  * where the Key is the class package name, and the Value is the Metric object itself
  * that contains the ClassName, InDegree, OutDegree and Stability. However, it made more sense to have 
  * a 2d Object Array display the details of the Metrics in the JTable. Essentially this is a Customised
@@ -16,7 +16,6 @@ import java.util.Map;
  * was intended to be used. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class ObjectMapAdapter {
 	

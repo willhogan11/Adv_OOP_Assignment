@@ -14,7 +14,6 @@ import java.util.Map.Entry;
  * The calculateMetrics() class returns the 2d Object Array that's then used bu the <b>View</b> or GUI section of the Application. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class CalculateMetrics implements Metricable {
 	
@@ -33,7 +32,6 @@ public class CalculateMetrics implements Metricable {
 	 * The calculateMetrics() class returns the 2d Object Array that's then used bu the <b>View</b> or GUI section of the Application. 
 	 * 
 	 * @return arrayObject
-	 * @throws ClassNotFoundException
 	 */
 	@SuppressWarnings("rawtypes")
 	public Object[][] calculateMetrics() throws ClassNotFoundException {
@@ -163,10 +161,10 @@ public class CalculateMetrics implements Metricable {
 	
 	
 	/**
-	 * Display Values stored in the Map, <String, Metric>
+	 * Display Values stored in a Map. 
 	 * This displays the stored values for the Key(Class Names) and Metric Object(ClassName, InDegree, OutDegree, Stability)
 	 * 
-	 * @param metricMap
+	 * @param metricMap Takes a Map as an argument
 	 */
 	public void displayMapValues(Map<String, Metric> metricMap) {
 		

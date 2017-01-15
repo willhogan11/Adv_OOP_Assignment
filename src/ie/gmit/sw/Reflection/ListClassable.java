@@ -5,38 +5,37 @@ package ie.gmit.sw.Reflection;
  * This <b>Abstraction</b> was created with the purpose of providing an opportunity to create any desired implementation.
  *  
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public interface ListClassable {
 
 	/**
 	 * Takes a String as an argument and adds it to the list. 
 	 * 
-	 *  @param String str
-	 *  @return boolean list.add(str)
+	 *  @param str
+	 *  @return list.add(str)
 	 */
 	public abstract boolean add(String str);
 	
 	/**
 	 * Takes a String as an argument and check if that string is in the list.
 	 * 
-	 *  @param String str
-	 *  @return boolean list.contains(str)
+	 *  @param str
+	 *  @return list.contains(str)
 	 */
 	public abstract boolean containsValue(String str);
 	
 	/**
 	 * Retrieves the value at a given index in the list.
 	 * 
-	 * @param int i
-	 * @return String list.get(i)
+	 * @param i
+	 * @return list.get(i)
 	 */
 	public abstract String retrieve(int i);
 	
 	/**
 	 * Returns the size of the list.
 	 * 
-	 * @return int list.size()
+	 * @return list.size()
 	 */
 	public abstract int length();
 	

@@ -5,7 +5,7 @@ package ie.gmit.sw.Reflection;
  * As the instance variables are declared as private, only the get and set methods are visible,
  * which <b>Encapsulates</b> them from an outside class.
  *  
- * A Metric object will hold the following:</br>
+ * A Metric object will hold the following:
  * <ul>
  * <li>The Class Name that is being scrutinised. </li>
  * <li>The In Degree or Afferent Couplings(Ca), which is the number of edges incident on a given class. </li>
@@ -16,7 +16,6 @@ package ie.gmit.sw.Reflection;
  * 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class Metric implements Metricator {
 
@@ -28,7 +27,7 @@ public class Metric implements Metricator {
 	/**
 	 * Returns the class name.
 	 * 
-	 * @return String className
+	 * @return className
 	 */
 	public String getClassName() {
 		return className;
@@ -37,7 +36,7 @@ public class Metric implements Metricator {
 	/**
 	 * Takes a string as an argument and sets the value of the class name.
 	 * 
-	 * @param String className
+	 * @param className
 	 */
 	public void setClassName(String className) {
 		this.className = className;
@@ -55,7 +54,7 @@ public class Metric implements Metricator {
 	/**
 	 * Takes an int as an argument and sets the value of the in degree.
 	 * 
-	 * @param int inDegree
+	 * @param inDegree
 	 */
 	public void setInDegree(int inDegree) {
 		this.inDegree = inDegree;
@@ -73,7 +72,7 @@ public class Metric implements Metricator {
 	/**
 	 * Takes an int as an argument and sets the value of the out degree.
 	 * 
-	 * @param int OutDegree
+	 * @param outDegree
 	 */
 	public void setOutDegree(int outDegree) {
 		this.outDegree = outDegree;
@@ -87,7 +86,7 @@ public class Metric implements Metricator {
 	/**
 	 * Takes a float as an argument and sets the value of the calculated stability. 
 	 * 
-	 * @param float stability
+	 * @param stability
 	 */
 	public void setStability(float stability){
 		getStability();

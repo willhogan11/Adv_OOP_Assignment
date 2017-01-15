@@ -7,7 +7,6 @@ import java.util.Map;
  * This <b>Abstraction</b> was created with the purpose of providing an opportunity to create any desired implementation.
  *  
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public interface Metricable {
 
@@ -19,15 +18,14 @@ public interface Metricable {
 	 * The calculateMetrics() class returns the 2d Object Array that's then used bu the <b>View</b> or GUI section of the Application. 
 	 * 
 	 * @return arrayObject
-	 * @throws ClassNotFoundException
 	 */
 	public abstract Object[][] calculateMetrics() throws ClassNotFoundException;
 	
 	/**
-	 * Display Values stored in the Map, <String, Metric>
+	 * Display Values stored in the Map. 
 	 * This displays the stored values for the Key(Class Names) and Metric Object(ClassName, InDegree, OutDegree, Stability)
 	 * 
-	 * @param metricMap
+	 * @param metricMap Takes a Map as an argument
 	 */
 	public abstract void displayMapValues(Map<String, Metric> metricMap);
 	

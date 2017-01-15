@@ -6,7 +6,6 @@ package ie.gmit.sw.Reflection;
  * before continuing on to the GUI part of the this application. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class TestRunner {
 

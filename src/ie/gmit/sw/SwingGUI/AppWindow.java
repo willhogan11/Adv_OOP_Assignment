@@ -9,7 +9,6 @@ import java.awt.event.*;
  * Clicking the display metric button, launches a JFrame table with the analysed metric data from a given Jar File.  
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class AppWindow {
 	private JFrame frame;

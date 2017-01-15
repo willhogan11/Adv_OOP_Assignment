@@ -8,7 +8,6 @@ import ie.gmit.sw.Reflection.CalculateMetrics;
  * Using the various methods in this class, the data is used to populate the JTable on the GUI front end of the application
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class TypeSummaryTableModel extends AbstractTableModel {
 	
@@ -19,7 +18,7 @@ public class TypeSummaryTableModel extends AbstractTableModel {
 	private Object[][] data;
 	
 	/**
-	 * @throws ClassNotFoundException
+	 * Constructor
 	 */
 	public TypeSummaryTableModel() throws ClassNotFoundException{
 		cm = new CalculateMetrics();
@@ -41,7 +40,7 @@ public class TypeSummaryTableModel extends AbstractTableModel {
 	}
 
     /**
-     * @param int col
+     * @param col
      * @return String cols[col]
      */
     public String getColumnName(int col) {
@@ -49,8 +48,8 @@ public class TypeSummaryTableModel extends AbstractTableModel {
     }
 
     /**
-     * @param int row
-     * @param int col
+     * @param row
+     * @param col
      * @return Object data[row][col]
      */
     public Object getValueAt(int row, int col) {
@@ -58,7 +57,7 @@ public class TypeSummaryTableModel extends AbstractTableModel {
 	}
     
     /**
-     * @param int c
+     * @param c
      * @return Class getValueAt(0, c).getClass()
      */
     public Class<?> getColumnClass(int c) {

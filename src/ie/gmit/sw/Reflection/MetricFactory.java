@@ -6,7 +6,6 @@ package ie.gmit.sw.Reflection;
  * will only be one instance of a Metric object per run. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class MetricFactory {
 	

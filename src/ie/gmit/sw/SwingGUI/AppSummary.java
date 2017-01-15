@@ -12,7 +12,6 @@ import ie.gmit.sw.Reflection.CalculateMetrics;
  * The JTable is loaded when the <b>Display Metric Summary</b> button is clicked in the {@link AppWindow} class JFrame. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class AppSummary extends JDialog{
 	private static final long serialVersionUID = 777L;	
@@ -27,9 +26,8 @@ public class AppSummary extends JDialog{
 	/**
 	 * The constructor of the AppSummary class that loads the various methods etc. 
 	 * 
-	 * @param JFrame parent
-	 * @param boolean modal
-	 * @throws ClassNotFoundException
+	 * @param parent
+	 * @param modal
 	 */
 	public AppSummary(JFrame parent, boolean modal) throws ClassNotFoundException{
         super(parent, modal);
@@ -50,8 +48,6 @@ public class AppSummary extends JDialog{
 	
 	/**
 	 * A Method that creates the JTable within the JFrame of this class. 
-	 * 
-	 * @throws ClassNotFoundException
 	 */
 	private void createTable() throws ClassNotFoundException{
 		tm = new TypeSummaryTableModel();

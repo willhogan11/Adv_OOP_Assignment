@@ -5,7 +5,6 @@ package ie.gmit.sw.Reflection;
  * Fully <b>Encapsulates</b> the jar file name. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class JarFileName {
 

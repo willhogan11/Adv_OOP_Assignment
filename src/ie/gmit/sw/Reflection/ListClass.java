@@ -11,7 +11,6 @@ import java.util.List;
  * by implementing a customised version of the java.util.list class, demonstrates the use of Delegation. 
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class ListClass implements ListClassable {
 	
@@ -21,8 +20,8 @@ public class ListClass implements ListClassable {
 	/**
 	 * Takes a String as an argument and adds it to the list. 
 	 * 
-	 *  @param String str
-	 *  @return boolean list.add(str)
+	 *  @param str
+	 *  @return list.add(str)
 	 */
 	public boolean add(String str) {
 		return list.add(str);
@@ -31,8 +30,8 @@ public class ListClass implements ListClassable {
 	/**
 	 * Takes a String as an argument and check if that string is in the list.
 	 * 
-	 *  @param String str
-	 *  @return boolean list.contains(str)
+	 *  @param str
+	 *  @return list.contains(str)
 	 */
 	public boolean containsValue(String str) {
 		return list.contains(str);
@@ -41,8 +40,8 @@ public class ListClass implements ListClassable {
 	/**
 	 * Retrieves the value at a given index in the list.
 	 * 
-	 * @param int i
-	 * @return String list.get(i)
+	 * @param i
+	 * @return list.get(i)
 	 */
 	public String retrieve(int i) {
 		return list.get(i);
@@ -51,7 +50,7 @@ public class ListClass implements ListClassable {
 	/**
 	 * Returns the size of the list.
 	 * 
-	 * @return int list.size()
+	 * @return list.size()
 	 */
 	public int length() {
 		return list.size();

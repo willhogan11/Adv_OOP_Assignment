@@ -22,7 +22,6 @@ import java.util.jar.JarInputStream;
  * </ul>
  * 
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public class ReadJarFileData {
 	

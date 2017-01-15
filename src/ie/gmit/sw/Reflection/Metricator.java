@@ -5,7 +5,6 @@ package ie.gmit.sw.Reflection;
  * This <b>Abstraction</b> was created with the purpose of providing an opportunity to create any desired implementation.
  *  
  * @author Will Hogan
- * @category Advanced Object oriented Programming
  */
 public interface Metricator {
 
@@ -19,7 +18,7 @@ public interface Metricator {
 	/**
 	 * Takes a string as an argument and sets the value of the class name.
 	 * 
-	 * @param String className
+	 * @param className
 	 */
 	public abstract void setClassName(String className);
 	
@@ -33,7 +32,7 @@ public interface Metricator {
 	/**
 	 * Takes an int as an argument and sets the value of the in degree.
 	 * 
-	 * @param int inDegree
+	 * @param inDegree
 	 */
 	public abstract void setInDegree(int inDegree);
 	
@@ -47,14 +46,14 @@ public interface Metricator {
 	/**
 	 * Takes an int as an argument and sets the value of the out degree.
 	 * 
-	 * @param int OutDegree
+	 * @param outDegree
 	 */
 	public abstract void setOutDegree(int outDegree);
 	
 	/**
 	 * Takes a float as an argument and sets the value of the calculated stability. 
 	 * 
-	 * @param float stability
+	 * @param stability
 	 */
 	public abstract void setStability(float stability);
 	
