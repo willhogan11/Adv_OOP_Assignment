@@ -110,6 +110,7 @@ Here are the full steps for running this application;
 - Launch the application by executing the ```Runner``` class inside the ```ie.gmit.sw.SwingGUI``` package. 
 - Click the **Display Metric Summary** button on the JFrame that appears. 
 - View the Metrics displayed in a separate JTable. 
+- You can also launch the ```TestRunner``` class, to display the metrics in the Console instead.  
 
 --- 
 
