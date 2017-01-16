@@ -83,7 +83,33 @@ I extensively used github services to manage my Commits, Branches, Issues and Mi
 --- 
 
 # Execution Instructions
-To run this application it is important to note that in order to focus on the required OOP side of this application, i opted to use the hardcoded Jar File ```string-service.jar```, which is available in this repository and will need to be placed in the root of the project directory. This project
+To run this application it is important to note that in order to focus on the required OOP side of this application, i opted to use the hardcoded Jar File ```string-service.jar```, which is available in this repository and will need to be placed in the root of the project directory. If this path needs to be altered, go to the below class and add as required. 
+
+```java
+public class JarFileName {
+
+	// Create the name of the jar file as a String
+	private String jarFileName = "string-service.jar";
+
+	/**
+	 * Get the string value and return it.
+	 * 
+	 * @return jarFileName
+	 */
+	public String getFile() {
+		return jarFileName;
+	}
+}
+```
+
+Here are the full steps for running this application;
+- Download a copy of this repository.
+- Extract the src java files (and package names) along with the above jar file, into a directory of your choosing. 
+- Change (if required) the package naming convention (The current ones are ```ie.gmit.sw.Reflection``` and ```ie.gmit.sw.SwingGUI```). 
+- Compile all .java source files if running from the command line
+- Launch the application by executing the ```Runner``` class inside the ```ie.gmit.sw.SwingGUI``` package. 
+- Click the **Display Metric Summary** button on the JFrame that appears. 
+- View the Metrics displayed in a separate JTable. 
 
 --- 
 
