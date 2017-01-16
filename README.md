@@ -12,9 +12,7 @@
 ---
 
 # Application Overview
-I have created a Java application that uses reflection to analyse an arbitrary Java Application Archive (JAR) and calculates the positional stability of each of the component classes in its object graph. 
-
-Each class within the Jar file is extracted and analysed and various performance metrics are calculated based on various couplings. 
+I have created a Java application that uses reflection to analyse an arbitrary Java Application Archive (JAR) and calculates the positional stability of each of the component classes in its object graph. Each class within the Jar file is extracted and analysed and various performance metrics are calculated based on various couplings. 
 
 #### Afferent Couplings 
 This refers to the In Degree or the number of edges incident on a type, i.e. the number of
@@ -83,7 +81,7 @@ I extensively used github services to manage my Commits, Branches, Issues and Mi
 --- 
 
 # Execution Instructions
-To run this application it is important to note that in order to focus on the required OOP side of this application, i opted to use the hardcoded Jar File ```string-service.jar```, which is available in this repository and will need to be placed in the root of the project directory. If this path needs to be altered, go to the below class and add as required. 
+To run this application it is important to note that in order to focus on the required OOP side of this application, i opted to use the hardcoded Jar File ```string-service.jar```, which is available in this repository and will need to be placed in the root of the project directory. If this path needs to be altered, go to the below class and add as required. You will also need to add this jar file to your project build path with the following prefix ```javac -classpath```, or in eclipse import in the jar file, right click on it and click **Add to Build Path**. 
 
 ```java
 public class JarFileName {
@@ -105,8 +103,9 @@ public class JarFileName {
 Here are the full steps for running this application;
 - Download a copy of this repository.
 - Extract the src java files (and package names) along with the above jar file, into a directory of your choosing. 
+- Add the jar file to the build path of your project. 
 - Change (if required) the package naming convention (The current ones are ```ie.gmit.sw.Reflection``` and ```ie.gmit.sw.SwingGUI```). 
-- Compile all .java source files if running from the command line
+- Compile all .java source files if running from the command line. 
 - Launch the application by executing the ```Runner``` class inside the ```ie.gmit.sw.SwingGUI``` package. 
 - Click the **Display Metric Summary** button on the JFrame that appears. 
 - View the Metrics displayed in a separate JTable. 
